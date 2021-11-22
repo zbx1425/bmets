@@ -1,0 +1,9 @@
+[submodule "lib/stb"]
+	path = lib/stb
+	url = https://hub.fastgit.org/nothings/stb
+[submodule "lib/win-iconv"]
+	path = lib/win-iconv
+	url = https://hub.fastgit.org/win-iconv/win-iconv
+[submodule "lib/imgui/imgui"]
+	path = lib/imgui/imgui
+	url = https://hub.fastgit.org/ocornut/imgui.git
