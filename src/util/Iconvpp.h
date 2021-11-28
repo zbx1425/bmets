@@ -71,7 +71,11 @@ class converter {
     while (0 < src_size) {
       char* dst_ptr = &buf[0];
       size_t dst_size = buf.size();
+#ifdef _WIN32
+      size_t res = ::iconv(iconv_, (const char**) &src_ptr, &src_size, &dst_ptr, &dst_size);
+#else
       size_t res = ::iconv(iconv_, (char**) &src_ptr, &src_size, &dst_ptr, &dst_size);
+#endif
       if (res == (size_t)-1) {
         if (errno == E2BIG)  {
           // ignore this error

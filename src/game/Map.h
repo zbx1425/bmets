@@ -18,9 +18,9 @@ namespace bmets::game {
     double x, y, z, rx, ry, rz, span, interval, begin_location;
     int tilt;
     bool has_begun;
-    bmets::math::IFollowable* track;
+    bmets::math::Followable* track;
     std::vector<bmets::render::ModelList*> structures;
-    void begin(Map* map, double location, bmets::math::IFollowable* track, 
+    void begin(Map* map, double location, bmets::math::Followable* track, 
       double x, double y, double z, double rx, double ry, double rz,
       int tilt, double span, double interval, std::vector<bmets::render::ModelList*> structures);
     void end(Map* map, double location);

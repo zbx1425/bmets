@@ -4,8 +4,6 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
     message(FATAL_ERROR "In-source builds not allowed. You can search the web about performing out-source builds with CMake.")
 endif()
 
-set(ANTLR_EXECUTABLE /usr/share/java/antlr-complete.jar)
-
 cmake_policy(SET CMP0074 NEW)
 
 project(bmets VERSION 0.1)
@@ -50,7 +48,7 @@ include_directories(${GLM_INCLUDE_DIRS})
 
 # Iconv
 if(MSVC)
-    set(BUILD_EXECUTABLE OFF)
+    set(BUILD_EXECUTABLE OFF CACHE BOOL "Don't build Win-Iconv executable" FORCE)
     add_subdirectory(lib/win-iconv)
     include_directories(./lib/win-iconv)
     target_link_libraries(bmets iconv)

@@ -220,7 +220,7 @@ static inline int chunkofdist(int dist) {
 }
 
 static void iterative_qsort(ModelList* list) {
-  int stack[list->transforms.size()];
+  std::vector<int> stack(list->transforms.size());
   int top = -1;
   stack[++top] = 0;
   stack[++top] = list->transforms.size() - 1;

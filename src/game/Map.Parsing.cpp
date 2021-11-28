@@ -24,8 +24,8 @@ static FmtException ex_invalid_stmt(bmets::parser::BveMapStatement &stmt) {
   return FmtException("Invalid or unsupported element/function in '%s'", stmt.to_string().c_str());
 }
 
-static bmets::math::IFollowable* find_track(Map* map, bmets::parser::BveMapValue value) {
-  bmets::math::IFollowable* targetTrack;
+static bmets::math::Followable* find_track(Map* map, bmets::parser::BveMapValue value) {
+  bmets::math::Followable* targetTrack;
   if (!value.to_bool()) {
     targetTrack = &(map->track_main);
   } else {

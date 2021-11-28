@@ -6,7 +6,7 @@
 
 using namespace bmets::game;
 
-void Repeater::begin(Map* map, double location, bmets::math::IFollowable* track, 
+void Repeater::begin(Map* map, double location, bmets::math::Followable* track, 
       double x, double y, double z, double rx, double ry, double rz,
       int tilt, double span, double interval, std::vector<bmets::render::ModelList*> structures) {
   if (has_begun) apply(map, location);
